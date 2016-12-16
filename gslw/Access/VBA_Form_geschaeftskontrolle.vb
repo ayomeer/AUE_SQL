@@ -138,7 +138,34 @@ Private Sub Form_Open(Cancel As Integer)
     
 End Sub
 
+'-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+'Excel Export Button Event Handlers
+'-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+' Beschreibung und Definition der Funktion in 'tools' Modul
 
+Private Sub ButtonExportToExcel_Alle_Click()
+    Call tools.ExportToExcel(ListeBewirtschafter_Alle)
+End Sub
+
+Private Sub ButtonExportToExcel_SVAgesendet_Click()
+    Call tools.ExportToExcel(ListeBewirtschafter_SVAgesendet)
+End Sub
+
+Private Sub ButtonExportToExcel_SVAantwort_Click()
+    Call tools.ExportToExcel(ListeBewirtschafter_SVAantwort)
+End Sub
+
+Private Sub ButtonExportToExcel_Aufgebot_Click()
+    Call tools.ExportToExcel(ListeBewirtschafter_Aufgebot)
+End Sub
+
+Private Sub ButtonExportToExcel_Kontrolliert_Click()
+    Call tools.ExportToExcel(ListeBewirtschafter_Kontrolliert)
+End Sub
+
+Private Sub ButtonExportToExcel_Abgeschlossen_Click()
+    Call tools.ExportToExcel(ListeBewirtschafter_Abgeschlossen)
+End Sub
 
 '-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ' Bewirtschafter Info Button Event Handlers
@@ -610,7 +637,6 @@ Err_InvalidPath:
 Err_Cancel:
 End Sub
 
-' Theeeheee!
 
 '-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ' PDF-Export Pfadauswahl Buttons
