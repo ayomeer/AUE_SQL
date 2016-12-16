@@ -1,0 +1,71 @@
+CASE
+	
+	
+	WHEN "ext_lbnr" IS NOT NULL AND  "ext_grundstck" IS NOT NULL AND "ortschaft" IS NOT NULL AND "ext_flurname" IS NOT NULL AND "name" IS NOT NULL AND "zustellid" IS NOT NULL AND "ablagenr" IS NOT NULL
+	THEN "ext_lbnr"  || '  |  ' || "ext_grundstck" || '  |  ' || "ortschaft" || '  |  ' || "ext_flurname"  || '  |  ' || "name" || '  |  ' || "zustellid" || '  |  ' || "ablagenr" 
+
+	WHEN "ext_lbnr" IS NOT NULL AND  "ext_grundstck" IS NOT NULL AND "ortschaft" IS NOT NULL AND "ext_flurname" IS NOT NULL AND "name" IS NOT NULL AND "zustellid" IS NOT NULL
+	THEN "ext_lbnr"  || '  |  ' || "ext_grundstck" || '  |  ' || "ortschaft" || '  |  ' || "ext_flurname"  || '  |  ' || "name" || '  |  ' || "zustellid" 
+	
+	WHEN "ext_lbnr" IS NOT NULL AND  "ext_grundstck" IS NOT NULL AND "ortschaft" IS NOT NULL AND "ext_flurname" IS NOT NULL AND "name" IS NOT NULL
+	THEN "ext_lbnr"  || '  |  ' || "ext_grundstck" || '  |  ' || "ortschaft" || '  |  ' || "ext_flurname"  || '  |  ' || "name" 
+	
+	WHEN "ext_lbnr" IS NOT NULL AND  "ext_grundstck" IS NOT NULL AND "ortschaft" IS NOT NULL AND "ext_flurname" IS NOT NULL
+	THEN "ext_lbnr"  || '  |  ' || "ext_grundstck" || '  |  ' || "ortschaft" || '  |  ' || "ext_flurname"
+	
+	WHEN "ext_lbnr" IS NOT NULL AND  "ext_grundstck" IS NOT NULL AND "ortschaft" IS NOT NULL AND "name" IS NOT NULL
+	THEN "ext_lbnr"  || '  |  ' || "ext_grundstck" || '  |  ' || "ortschaft" || '  |  ' || "name"
+	
+	
+	
+    WHEN "ext_grundstck" IS NOT NULL AND "ext_flurname" IS NOT NULL AND "ortschaft" IS NOT NULL AND "name" IS NOT NULL AND "zustellid" IS NOT NULL AND "ablagenr" IS NOT NULL
+	THEN "ext_grundstck" || '  |  ' || "ext_flurname"  || '  |  ' || "ortschaft" || '  |  ' || "name" || '  |  ' || "zustellid" || '  |  ' || "ablagenr" 
+	
+	WHEN "ext_grundstck" IS NOT NULL AND "ext_flurname" IS NOT NULL AND "ortschaft" IS NOT NULL AND "name" IS NOT NULL AND "zustellid" IS NOT NULL
+	THEN "ext_grundstck" || '  |  ' || "ext_flurname"  || '  |  ' || "ortschaft" || '  |  ' || "name" || '  |  ' || "zustellid" 
+	
+	WHEN "ext_grundstck" IS NOT NULL AND "ext_flurname" IS NOT NULL AND "ortschaft" IS NOT NULL AND "name" IS NOT NULL
+	THEN "ext_grundstck" || '  |  ' || "ext_flurname"  || '  |  ' || "ortschaft" || '  |  ' || "name" 
+	
+	WHEN "ext_grundstck" IS NOT NULL AND "ext_flurname" IS NOT NULL AND "ortschaft" IS NOT NULL AND "ablagenr" IS NOT NULL
+	THEN "ext_grundstck" || '  |  ' || "ext_flurname" || '  |  ' || "ortschaft" || '  |  ' || "ablagenr" 
+	
+	
+	WHEN "ext_grundstck" IS NOT NULL AND "ext_flurname" IS NOT NULL AND "ortschaft" IS NOT NULL
+	THEN "ext_grundstck" || '  |  ' || "ortschaft" || '  |  ' || "ext_flurname"
+	
+	WHEN "ext_grundstck" IS NOT NULL AND "name" IS NOT NULL AND "ortschaft" IS NOT NULL
+	THEN "ext_grundstck" || '  |  ' || "name" || '  |  ' || "ortschaft" 
+	
+	WHEN "ext_grundstck" IS NOT NULL AND "ablagenr" IS NOT NULL AND "ortschaft" IS NOT NULL
+	THEN "ext_grundstck" || '  |  ' || "ablagenr" || '  |  ' || "ortschaft" 
+	
+	
+	
+	WHEN "ext_flurname" IS NOT NULL AND "ortschaft" IS NOT NULL AND "name" IS NOT NULL AND "zustellid" IS NOT NULL AND "ablagenr" IS NOT NULL
+	THEN "ext_flurname"  || '  |  ' || "ortschaft" || '  |  ' || "name" || '  |  ' || "zustellid" || '  |  ' || "ablagenr" 
+	
+	WHEN "ext_flurname" IS NOT NULL AND "ortschaft" IS NOT NULL AND "name" IS NOT NULL AND "zustellid" IS NOT NULL
+	THEN "ext_flurname" || '  |  ' || "ortschaft" || '  |  ' || "name" || '  |  ' || "zustellid" 
+	
+	
+	
+	WHEN "ext_flurname" IS NOT NULL AND "ablagenr" IS NOT NULL AND "ortschaft" IS NOT NULL
+	THEN "ext_flurname"  || '  |  ' || "ablagenr" || '  |  ' || "ortschaft" 
+	
+	WHEN "ext_flurname" IS NOT NULL AND "name" IS NOT NULL AND "ortschaft" IS NOT NULL
+	THEN "ext_flurname"  || '  |  ' || "name" || '  |  ' || "ortschaft" 
+	
+	
+	WHEN "ext_lbnr" IS NOT NULL AND  "ablagenr" IS NOT NULL
+	THEN "ext_lbnr"  || '  |  ' || "ablagenr"
+	
+	WHEN "ext_lbnr" IS NOT NULL AND  "ext_flurname" IS NOT NULL
+	THEN "ext_lbnr"  || '  |  ' || "ext_flurname"
+	
+	WHEN "ext_lbnr" IS NOT NULL AND "name" IS NOT NULL 
+	THEN "ext_lbnr"  || '  |  ' || "name" 
+	
+	
+	ELSE 'nichts gefunden'
+END
